@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'daily_entry.dart';
-import 'theme.dart';
-import 'add_entry_sheet.dart';
-import 'widgets/summary_card.dart';
-import 'widgets/entry_card.dart';
+import '../model/daily_entry.dart';
+import '../core/theme.dart';
+import '../componets/add_entry_sheet.dart';
+import '../widgets/summary_card.dart';
+import '../widgets/entry_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void addEntry(DailyEntry entry) {
     setState(() {
-      entries.insert(0, entry); // naya entry sabse upar
+      entries.insert(0, entry);
     });
   }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'daily_entry.dart';
-import 'theme.dart';
+import '../model/daily_entry.dart';
+import '../core/theme.dart';
 
 class AddEntrySheet extends StatefulWidget {
   final Function(DailyEntry) onAdd;
@@ -65,7 +65,6 @@ class _AddEntrySheetState extends State<AddEntrySheet> {
           Text("NAYI ENTRY", style: AppText.label),
           const SizedBox(height: 16),
 
-          // platform selector — chips ki tarah
           Wrap(
             spacing: 8,
             children: platforms.map((p) {

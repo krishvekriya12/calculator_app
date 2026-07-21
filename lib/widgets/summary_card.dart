@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../theme.dart';
+import '../core/theme.dart';
 
 class SummaryCard extends StatelessWidget {
   final double totalProfit;
@@ -49,7 +49,6 @@ class SummaryCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          // count-up animation — number 0 se actual value tak animate hoga
           TweenAnimationBuilder<double>(
             tween: Tween(begin: 0, end: totalProfit),
             duration: const Duration(milliseconds: 900),

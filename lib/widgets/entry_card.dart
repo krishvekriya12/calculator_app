@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:intl/intl.dart';
-import '../daily_entry.dart';
-import '../theme.dart';
+import '../model/daily_entry.dart';
+import '../core/theme.dart';
 
 class EntryCard extends StatelessWidget {
   final DailyEntry entry;
@@ -52,7 +52,6 @@ class EntryCard extends StatelessWidget {
               ],
             ),
           ),
-          // "stamp" style badge — thoda rotate kiya hua, ledger book stamp jaisa
           Transform.rotate(
             angle: -0.08,
             child: Container(
@@ -79,7 +78,6 @@ class EntryCard extends StatelessWidget {
       ),
     );
 
-    // list me naya entry slide + fade ho ke aayega
     return card
         .animate()
         .fadeIn(duration: 350.ms, delay: (index * 40).ms)
